@@ -16,7 +16,7 @@
         "CHAT_ID": {
             "description": "",
             "required": "True"
-        }   
+        },   
         "APP_ID": {
             "description": "Get this value from https://my.telegram.org",
             "required": "True"
