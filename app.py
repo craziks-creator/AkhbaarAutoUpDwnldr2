@@ -3,6 +3,9 @@ import json, requests, time, random, datetime, schedule
 from telegram import Bot, ParseMode
 from os import getenv
 from dotenv import load_dotenv
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+
 
 # Configs
 API_HASH = os.environ['API_HASH']
@@ -10,6 +13,14 @@ APP_ID = int(os.environ['APP_ID'])
 TOKEN = os.environ['BOT_TOKEN']
 chat_id = int(os.environ['CHAT_ID']) 
 bot = Bot(token=TOKEN)
+#Button
+START_BUTTONS=[
+    [
+        InlineKeyboardButton('Source', url='https://github.com/X-Gorn/TikTokDL'),
+        InlineKeyboardButton('Project Channel', url='https://t.me/xTeamBots'),
+    ],
+    [InlineKeyboardButton('Author', url='https://t.me/xgorn')],
+]
 print("----> RUNNING UR PYTHON SCRAPPER SCHEDULLER...")
 
 url = [ ["https://newspaperpdf.online/the-hindu-pdf-download.php", False],
