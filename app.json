@@ -9,7 +9,7 @@
     ],
     "repository": "https://github.com/craziks-creator/AkhbaarAutoUpDwnldr2",
     "env": {
-        "TOKEN": {
+        "BOT_TOKEN": {
             "description": "",
             "required": "True"
         },
