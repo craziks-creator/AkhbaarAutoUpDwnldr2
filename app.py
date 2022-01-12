@@ -15,37 +15,7 @@ TOKEN = os.environ['BOT_TOKEN']
 chat_id = int(os.environ['CHAT_ID']) 
 bot = Bot(token=TOKEN)
 #Button
-START_BUTTONS=[
-    [
-        InlineKeyboardButton('Source', url='https://github.com/'),
-        InlineKeyboardButton('Project Channel', url='https://t.me/'),
-    ],
-    [InlineKeyboardButton('Author', url='https://t.me/')],
-]
 print("----> RUNNING UR PYTHON SCRAPPER SCHEDULLER...")
-# Running bot
-xbot = Client('TikTokDL', api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
-
-
-# Helpers
-# Thanks to FridayUB
-async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
-  args = shlex.split(cmd)
-  process = await asyncio.create_subprocess_exec(
-      *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-  )
-  stdout, stderr = await process.communicate()
-  return (
-      stdout.decode("utf-8", "replace").strip(),
-      stderr.decode("utf-8", "replace").strip(),
-      process.returncode,
-      process.pid,
-  )
-
-# Start
-@xbot.on_message(filters.command('start') & filters.private)
-async def _start(bot, update):
-  await update.reply_text(f"I'm bot for SSC updates!\nYou can add me to your channel ", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
 
 url = [ ["https://newspaperpdf.online/the-hindu-pdf-download.php", False],
             ["https://newspaperpdf.online/download-financial-express.php", False],
@@ -139,6 +109,6 @@ while True:
     
 
 # schedulling_fun()   #DEBUGGING...
-xbot.run()
+
 
            
