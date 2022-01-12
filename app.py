@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
-import json, requests, time, random, datetime, schedule, os
+import json, requests, time, random, datetime, schedule, os, shlex, asyncio, uuid, shutil
 from telegram import Bot, ParseMode
 from os import getenv
+from typing import Tuple
 from dotenv import load_dotenv
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
@@ -22,6 +23,29 @@ START_BUTTONS=[
     [InlineKeyboardButton('Author', url='https://t.me/xgorn')],
 ]
 print("----> RUNNING UR PYTHON SCRAPPER SCHEDULLER...")
+# Running bot
+xbot = Client('TikTokDL', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+
+
+# Helpers
+# Thanks to FridayUB
+async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
+  args = shlex.split(cmd)
+  process = await asyncio.create_subprocess_exec(
+      *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+  )
+  stdout, stderr = await process.communicate()
+  return (
+      stdout.decode("utf-8", "replace").strip(),
+      stderr.decode("utf-8", "replace").strip(),
+      process.returncode,
+      process.pid,
+  )
+
+# Start
+@xbot.on_message(filters.command('start') & filters.private)
+async def _start(bot, update):
+  await update.reply_text(f"I'm TikTokDL!\nYou can download tiktok video/audio using this bot", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
 
 url = [ ["https://newspaperpdf.online/the-hindu-pdf-download.php", False],
             ["https://newspaperpdf.online/download-financial-express.php", False],
@@ -115,6 +139,6 @@ while True:
     
 
 # schedulling_fun()   #DEBUGGING...
-
+xbot.run()
 
            
