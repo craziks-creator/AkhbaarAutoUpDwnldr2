@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 API_HASH = os.environ['API_HASH']
 APP_ID = int(os.environ['APP_ID'])
 BOT_TOKEN = os.environ['BOT_TOKEN']
-CHAT_ID = int(os.environ['CHAT_ID']) 
+chat_id = int(os.environ['CHAT_ID']) 
 bot = Bot(token=TOKEN)
 print("----> RUNNING UR PYTHON SCRAPPER SCHEDULLER...")
 
