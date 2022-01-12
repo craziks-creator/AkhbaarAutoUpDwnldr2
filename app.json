@@ -16,7 +16,7 @@
         "CHAT_ID": {
             "description": "",
             "required": "True"
-        },   
+        }   
     },
     "stack": "heroku-20",
     "buildpacks": [
