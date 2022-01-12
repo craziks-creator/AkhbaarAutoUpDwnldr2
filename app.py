@@ -17,11 +17,11 @@ bot = Bot(token=TOKEN)
 #Button
 print("----> RUNNING UR PYTHON SCRAPPER SCHEDULLER...")
 
-url = [ ["https://newspaperpdf.online/the-hindu-pdf-download.php", False],
-            ["https://newspaperpdf.online/download-financial-express.php", False],
-            ["https://newspaperpdf.online/download-indian-express.php", False],
-            ["https://newspaperpdf.online/download-dainik-jagran.php", False],
-          # ["https://newspaperpdf.online/download-economic-times.php", False],
+url = [ ["https://epaperpdf.online/the-hindu-pdf-download", False],
+            ["https://epaperpdf.online/the-financial-express-newspaper-today", True],
+            ["https://epaperpdf.online/download-indian-express.php", False],
+            ["https://epaperpdf.online/download-dainik-jagran.php", False],
+          # ["https://epaperpdf.online/download-economic-times.php", False],
             ["https://newspaperpdf.online/download-deccan-chronicle.php", False],
             ["https://newspaperpdf.online/download-jansatta.php", False],    
            # ["https://newspaperpdf.online/download-times-of-india.php", False],
