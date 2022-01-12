@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import json, requests, time, random, datetime, schedule
+import json, requests, time, random, datetime, schedule, os
 from telegram import Bot, ParseMode
 from os import getenv
 from dotenv import load_dotenv
