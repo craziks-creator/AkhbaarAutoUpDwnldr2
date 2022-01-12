@@ -17,10 +17,7 @@
             "description": "",
             "required": "True"
         },
-        "API ID": {
-            "description": "",
-            "required": "False"
-        }
+        
     },
     "stack": "heroku-20",
     "buildpacks": [
