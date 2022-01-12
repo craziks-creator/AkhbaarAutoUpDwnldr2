@@ -13,13 +13,13 @@
             "description": "",
             "required": "True"
         },
-        "API HASH": {
+        "CHAT_ID": {
             "description": "",
             "required": "True"
         },
         "API ID": {
             "description": "",
-            "required": "True"
+            "required": "False"
         }
     },
     "stack": "heroku-20",
