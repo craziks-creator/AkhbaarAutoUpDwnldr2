@@ -17,6 +17,14 @@
             "description": "",
             "required": "True"
         }   
+        "APP_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": "True"
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": "True"
+        }
     },
     "stack": "heroku-20",
     "buildpacks": [
