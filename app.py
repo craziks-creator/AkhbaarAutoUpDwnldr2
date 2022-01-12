@@ -1,12 +1,14 @@
 from bs4 import BeautifulSoup
-import requests, time, random, datetime, schedule
+import json, requests, time, random, datetime, schedule
 from telegram import Bot, ParseMode
 from os import getenv
 from dotenv import load_dotenv
 
-load_dotenv()
-TOKEN = getenv('TOKEN')   #-------->CHANGE to TOKEN1 FOR  DEBUG
-chat_id = getenv('CHAT_ID')   #---------->CHANGE  TO CHATID1 FOR  DEBUG
+# Configs
+API_HASH = os.environ['API_HASH']
+APP_ID = int(os.environ['APP_ID'])
+BOT_TOKEN = os.environ['BOT_TOKEN']
+CHAT_ID= int(os.environ['CHAT_ID']) 
 bot = Bot(token=TOKEN)
 print("----> RUNNING UR PYTHON SCRAPPER SCHEDULLER...")
 
