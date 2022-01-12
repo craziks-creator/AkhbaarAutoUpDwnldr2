@@ -7,7 +7,7 @@
         "telegram",
         "updates"
     ],
-    "repository": "https://github.com/craziks-creator/notofssc",
+    "repository": "https://github.com/craziks-creator/AkhbaarAutoUpDwnldr2",
     "env": {
         "TOKEN": {
             "description": "",
