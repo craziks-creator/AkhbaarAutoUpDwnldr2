@@ -17,14 +17,14 @@ bot = Bot(token=TOKEN)
 #Button
 START_BUTTONS=[
     [
-        InlineKeyboardButton('Source', url='https://github.com/X-Gorn/TikTokDL'),
-        InlineKeyboardButton('Project Channel', url='https://t.me/xTeamBots'),
+        InlineKeyboardButton('Source', url='https://github.com/'),
+        InlineKeyboardButton('Project Channel', url='https://t.me/'),
     ],
-    [InlineKeyboardButton('Author', url='https://t.me/xgorn')],
+    [InlineKeyboardButton('Author', url='https://t.me/')],
 ]
 print("----> RUNNING UR PYTHON SCRAPPER SCHEDULLER...")
 # Running bot
-xbot = Client('TikTokDL', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+xbot = Client('TikTokDL', api_id=APP_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 
 # Helpers
@@ -45,7 +45,7 @@ async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
 # Start
 @xbot.on_message(filters.command('start') & filters.private)
 async def _start(bot, update):
-  await update.reply_text(f"I'm TikTokDL!\nYou can download tiktok video/audio using this bot", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
+  await update.reply_text(f"I'm bot for SSC updates!\nYou can add me to your channel ", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
 
 url = [ ["https://newspaperpdf.online/the-hindu-pdf-download.php", False],
             ["https://newspaperpdf.online/download-financial-express.php", False],
